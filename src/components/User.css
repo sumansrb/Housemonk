@@ -1,0 +1,14 @@
+.userPage {
+  background-color: rgb(227, 227, 227);
+}
+
+/* @media screen and (max-width: "500px") {
+  .useCard {
+    width: 50%;
+  }
+} */
+
+/* .card {
+  -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+} */
