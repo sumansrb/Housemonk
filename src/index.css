@@ -29,6 +29,9 @@ code {
 }
 .sp {
   color: white;
+  background-color: rgb(57, 119, 252);
+  border: none;
+  outline: none;
   margin-right: 5px;
   cursor: pointer;
 }
@@ -39,8 +42,8 @@ code {
 input {
   background-color: transparent;
   border: 0px solid;
-  height: 20px;
-  width: 160px;
+  height: 100%;
+  width: 50%px;
   color: #ccc;
 }
 
@@ -52,6 +55,6 @@ input {
 
 @media all and (min-width: 1400px) {
   .holder {
-    width: 50%;
+    width: 40%;
   }
 }

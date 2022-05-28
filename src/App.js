@@ -10,7 +10,7 @@ function App() {
     <Router>
       <Routes>
         <Route exact path="/" element={<RecipeReviewCard />} />
-        <Route exact path="/user" element={<User />} />
+        <Route exact path="/user/:userId" element={<User />} />
       </Routes>
     </Router>
   );
