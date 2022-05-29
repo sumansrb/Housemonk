@@ -4,7 +4,7 @@ import CardHeader from "@mui/material/CardHeader";
 import Avatar from "@mui/material/Avatar";
 import PersonOutlineTwoToneIcon from "@mui/icons-material/PersonOutlineTwoTone";
 
-export default function UserCard() {
+export default function UserCard(props) {
   return (
     <Card>
       <CardHeader
@@ -13,8 +13,8 @@ export default function UserCard() {
             <PersonOutlineTwoToneIcon />
           </Avatar>
         }
-        title="username/reponame"
-        subheader="Description about repository"
+        title={props.fullName}
+        subheader={props.description ? props.description : "Not Available"}
       />
     </Card>
   );

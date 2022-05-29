@@ -30,8 +30,8 @@ const User = () => {
   };
 
   useEffect(() => {
+    console.log("hi");
     getData().then((data) => {
-      console.log(data);
       setUserData(data.data);
       setReposData(data.reposData);
     });
@@ -99,30 +99,32 @@ const User = () => {
             <div className="p-2">
               <div style={{ color: "#73777B" }}>Bio</div>
               <div>
-                <p>{userData.login}</p>
+                <p>{userData.bio ? userData.bio : "Not Available"}</p>
               </div>
               <div style={{ color: "#73777B" }}>Works at</div>
               <div>
-                <p>{userData.location ? userData.location : "Not provided"}</p>
+                <p>{userData.company || "Not provided"}</p>
               </div>
               <div className="row">
                 <div className="col">
                   <div style={{ color: "#73777B" }}>Repositories</div>
-                  52
+                  {userData.public_repos}
                 </div>
                 <div className="col">
                   <div style={{ color: "#73777B" }}>Followers</div>
-                  259
+                  {userData.followers}
                 </div>
                 <div style={{ color: "#73777B", marginTop: "20px" }}>
-                  Pinned Repositories
+                  {userData.pinned_repo
+                    ? "Pinned Repositories"
+                    : "Repositories"}
                 </div>
               </div>
             </div>
             {reposData &&
-              reposData.map((data) => (
+              reposData.slice(0, 5).map((data) => (
                 <div key={data.id} className="userCard p-2">
-                  <Card />
+                  <Card fullName={data.name} description={data.description} />
                 </div>
               ))}
           </div>
