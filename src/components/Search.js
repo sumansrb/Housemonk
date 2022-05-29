@@ -19,7 +19,7 @@ export default function RecipeReviewCard() {
   const searchUser = async () => {
     try {
       const usersData = await axios.get(
-        `https://api.github.com/search/users?q=${userName}&page=1&per_page=5`
+        `https://api.github.com/search/users?q=${userName}&page=1&per_page=100`
       );
       setLoading(false);
       return usersData.data.items;

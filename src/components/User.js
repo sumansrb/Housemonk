@@ -122,7 +122,7 @@ const User = () => {
               </div>
             </div>
             {reposData &&
-              reposData.slice(0, 5).map((data) => (
+              reposData.slice(0, 50).map((data) => (
                 <div key={data.id} className="userCard p-2">
                   <Card fullName={data.name} description={data.description} />
                 </div>
